@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+        .bi-person-circle {
+            font-size:250px;
+            color:var(--bs-info);
+            line-height: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-info text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        login
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade modal-sm" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-2">
+                <div class="modal-body text-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <form action="">
+                        <fieldset class="d-grid gap-2 text-center">
+                            <div class="rounded-circle bg-primary ratio ratio-1x1">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <legend class="text-center text-secondary m-0">Member Login</legend>
+                            <div class="mt-1">
+                                <label for="username" class="col-form-label d-none"></label>
+                                <input type="text" class="form-control" name="" id="username" placeholder="Username">
+                            </div>
+                            <div>
+                                <label for="password" class="col-form-label d-none"></label>
+                                <input type="password" class="form-control" name="" id="password" placeholder="Password">
+                            </div>
+                            <button type="button" class="btn btn-info col text-light my-2">Sign in</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer text-center p-0">
+                    <a href="#" class="btn btn-link mx-auto">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('load', function(){
+            const myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            
+            const modalToggle = document.getElementById('toggleMyModal'); 
+            myModal.show(modalToggle);
+        });
+    </script>
+</body>
+
+</html>
